@@ -1,10 +1,28 @@
-const titre = document.getElementById("titre");
-console.log(titre);
+const loisirs = ['football', 'salle de sport', 'tennis', 'cyclisme'];
 
-const Pparagraph = document.querySelector("description");
-console.log(Pparagraph);
 
-const allItems = document.querySelectorAll("item");
-console.log(allItems);
+const conteneur = document.getElementById('conteneur-liste');
 
-titre.textContent = "titre modifier !";
+
+const maListe = document.createElement('ul');
+
+
+for (let i = 0; i < loisirs.length; i++) {
+
+    const li = document.createElement('li');
+    
+   
+    li.textContent = loisirs[i];
+    
+  
+    li.classList.add('element-liste');
+    
+   
+    li.style.margin = '5px 0';
+    
+  
+    maListe.append(li);
+}
+
+
+conteneur.append(maListe);
