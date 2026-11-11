@@ -1,8 +1,8 @@
-# Jour 7 : Génération dynamique de listes
+# Jour 8 : Compteur interactif et mode sombre
 
 ## Ce que j'ai fait
-- J'ai fait un tableau en JavaScript avec plusieurs éléments.
-- J'ai utilisé `createElement` et `.append()` pour afficher ces éléments sous forme de liste directement dans la page.
+- J'ai créé un compteur interactif en JavaScript avec des boutons pour augmenter, diminuer et remettre à zéro la valeur.
+- J'ai ajouté un bouton de mode sombre qui permet de changer les couleurs de la page grâce à `classList.toggle`.
 
 ## Ce qui m'a bloqué
-- J'ai un peu galéré à comprendre comment bien ranger les éléments les uns dans les autres (`li` dans le `ul`), mais une fois que j'ai compris la logique, ça a fonctionné.
+- J'ai pris le temps de bien connecter les boutons JavaScript avec les éléments HTML et de gérer le changement de texte du bouton de thème, mais tout fonctionne bien.

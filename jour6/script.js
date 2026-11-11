@@ -1,28 +1,41 @@
-const loisirs = ['football', 'salle de sport', 'tennis', 'cyclisme'];
+
+let valeurCompteur = 0;
+
+const spanCompteur = document.getElementById('compteur');
+const btnMoins = document.getElementById('btn-moins');
+const btnPlus = document.getElementById('btn-plus');
+const btnReset = document.getElementById('btn-reset');
 
 
-const conteneur = document.getElementById('conteneur-liste');
+btnPlus.addEventListener('click', function() {
+    valeurCompteur++;
+    spanCompteur.textContent = valeurCompteur;
+});
 
 
-const maListe = document.createElement('ul');
+btnMoins.addEventListener('click', function() {
+    valeurCompteur--;
+    spanCompteur.textContent = valeurCompteur;
+});
 
 
-for (let i = 0; i < loisirs.length; i++) {
+btnReset.addEventListener('click', function() {
+    valeurCompteur = 0;
+    spanCompteur.textContent = valeurCompteur;
+});
 
-    const li = document.createElement('li');
+
+
+const btnTheme = document.getElementById('btn-theme');
+
+btnTheme.addEventListener('click', function() {
+   
+    document.body.classList.toggle('dark-mode');
     
    
-    li.textContent = loisirs[i];
-    
-  
-    li.classList.add('element-liste');
-    
-   
-    li.style.margin = '5px 0';
-    
-  
-    maListe.append(li);
-}
-
-
-conteneur.append(maListe);
+    if (document.body.classList.contains('dark-mode')) {
+        btnTheme.textContent = ' Mode Clair';
+    } else {
+        btnTheme.textContent = ' Mode Sombre';
+    }
+});
