@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 6 - DOM selectors</title>
+    <title>Jour 8 - Compteur & Mode Sombre</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id = "titre">Mon titre de page</h1>
-    <p class = "description">Ceci est une paragraph descriptive</p>
-    <ul>
-        <li item="1">premier element</li>
-        <li item="2">desxieme element</li>
-        <li item="3">troisieme element</li>
-    </ul>
+
+    <div class="card">
+       
+        <button id="btn-theme"> Mode Sombre</button>
+
+        <h1>Mon Compteur</h1>
+        
+       
+        <span id="compteur">0</span>
+
+       
+        <div class="buttons">
+            <button id="btn-moins">-</button>
+            <button id="btn-reset">Reset</button>
+            <button id="btn-plus">+</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
