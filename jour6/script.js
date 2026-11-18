@@ -1,41 +1,38 @@
+const form = document.getElementById('mon-formulaire');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const erreurEmail = document.getElementById('erreur-email');
+const erreurPassword = document.getElementById('erreur-password');
 
-let valeurCompteur = 0;
+form.addEventListener('submit', function(e) {
+  
+    e.preventDefault();
 
-const spanCompteur = document.getElementById('compteur');
-const btnMoins = document.getElementById('btn-moins');
-const btnPlus = document.getElementById('btn-plus');
-const btnReset = document.getElementById('btn-reset');
-
-
-btnPlus.addEventListener('click', function() {
-    valeurCompteur++;
-    spanCompteur.textContent = valeurCompteur;
-});
+    let isValid = true;
 
 
-btnMoins.addEventListener('click', function() {
-    valeurCompteur--;
-    spanCompteur.textContent = valeurCompteur;
-});
-
-
-btnReset.addEventListener('click', function() {
-    valeurCompteur = 0;
-    spanCompteur.textContent = valeurCompteur;
-});
-
-
-
-const btnTheme = document.getElementById('btn-theme');
-
-btnTheme.addEventListener('click', function() {
-   
-    document.body.classList.toggle('dark-mode');
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
-   
-    if (document.body.classList.contains('dark-mode')) {
-        btnTheme.textContent = ' Mode Clair';
+    if (!regexEmail.test(emailInput.value)) {
+        erreurEmail.textContent = "Veuillez entrer une adresse email valide.";
+        isValid = false;
     } else {
-        btnTheme.textContent = ' Mode Sombre';
+        erreurEmail.textContent = "";
+    }
+
+   
+    const regexPassword = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    if (!regexPassword.test(passwordInput.value)) {
+        erreurPassword.textContent = "Le mot de passe doit contenir 8 caractères, 1 majuscule et 1 chiffre.";
+        isValid = false;
+    } else {
+        erreurPassword.textContent = "";
+    }
+
+   
+    if (isValid) {
+        alert("Formulaire validé avec succès ! 🎉");
+        form.reset();
     }
 });

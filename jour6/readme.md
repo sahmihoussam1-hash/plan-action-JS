@@ -1,8 +1,9 @@
-# Jour 8 : Compteur interactif et mode sombre
+# Jour 9 : Validation de formulaire par Regex
 
 ## Ce que j'ai fait
-- J'ai créé un compteur interactif en JavaScript avec des boutons pour augmenter, diminuer et remettre à zéro la valeur.
-- J'ai ajouté un bouton de mode sombre qui permet de changer les couleurs de la page grâce à `classList.toggle`.
+- J'ai créé un formulaire d'inscription en HTML avec des champs email et mot de passe.
+- J'ai utilisé JavaScript et les expressions régulières (`RegEx`) pour vérifier si l'email et le mot de passe respectent les règles de sécurité.
+- J'ai affiché des messages d'erreur dynamiques si la saisie est incorrecte.
 
 ## Ce qui m'a bloqué
-- J'ai pris le temps de bien connecter les boutons JavaScript avec les éléments HTML et de gérer le changement de texte du bouton de thème, mais tout fonctionne bien.
+- J'ai pris le temps de comprendre comment fonctionne la méthode `.test()` avec les Regex et comment empêcher l'envoi du formulaire avec `e.preventDefault()`.

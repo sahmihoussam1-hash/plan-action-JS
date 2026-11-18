@@ -6,51 +6,59 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    transition: background-color 0.3s;
 }
 
-
-.card {
+.form-card {
     background-color: white;
     padding: 30px;
     border-radius: 12px;
-    text-align: center;
+    width: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-#compteur {
-    font-size: 48px;
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
     font-weight: bold;
-    display: block;
-    margin: 20px 0;
+    font-size: 14px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 
-.buttons button, #btn-theme {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 6px;
+.error-message {
+    color: #ff3b30;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
     background-color: #007bff;
     color: white;
-    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.buttons button:hover, #btn-theme:hover {
+button:hover {
     opacity: 0.9;
-}
-
-
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode .card {
-    background-color: #1e1e1e;
-    color: white;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
 }
